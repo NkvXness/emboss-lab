@@ -1,0 +1,9 @@
+/docs/
+/samples/
+/.venv/
+/.pytest_cache/
+/rust/target/
+__pycache__/
+*.pyd
+*.so
+*.whl

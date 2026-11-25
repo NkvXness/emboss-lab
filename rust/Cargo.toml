@@ -1,0 +1,12 @@
+[package]
+name = "emboss-lab"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.83"
+
+[lib]
+name = "_native"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "=0.27.2"

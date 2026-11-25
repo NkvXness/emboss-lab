@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin==1.9.6"]
+build-backend = "maturin"
+
+[project]
+name = "emboss-lab"
+version = "0.1.0"
+description = "Десктопная лабораторная по параллельному тиснению BMP"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["PySide6==6.10.1", "Pillow==12.1.1"]
+
+[project.gui-scripts]
+emboss-lab = "emboss_lab.main:main"
+
+[tool.maturin]
+manifest-path = "rust/Cargo.toml"
+python-source = "python"
+module-name = "emboss_lab._native"
+features = ["pyo3/extension-module"]
+locked = true
+exclude = ["**/__pycache__/**"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
